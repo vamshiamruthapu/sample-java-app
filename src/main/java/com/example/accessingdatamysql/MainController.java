@@ -36,7 +36,8 @@ public class MainController {
 		return userRepository.findAll();
 	}
 	@DeleteMapping("/deleteuser/{id}")
-	public void deleteEmployee(@PathVariable("id") int id) {
+	public @ResponseBody String deleteEmployee(@PathVariable("id") int id) {
 		userRepository.deleteById(id);
+		return "User Deleted successfully";
 	}
 }
