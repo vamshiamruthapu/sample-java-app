@@ -33,4 +33,8 @@ public class MainController {
 		// This returns a JSON or XML with the users
 		return userRepository.findAll();
 	}
+	@DeleteMapping("/deleteuser/{id}")
+	public void deleteEmployee(@PathVariable("id") int id) {
+		userRepository.deleteById(id);
+	}
 }
