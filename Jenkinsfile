@@ -17,7 +17,7 @@ pipeline {
                     docker login -u admin -p "Vamshi@123" 54.235.238.149:8082
                     docker push 54.235.238.149:8082/sample-java-app/`echo $BRANCH_NAME | tr [:upper:] [:lower:]`:${BUILD_NUMBER}
                     docker rmi 54.235.238.149:8082/sample-java-app/`echo $BRANCH_NAME | tr [:upper:] [:lower:]`:${BUILD_NUMBER}
-                    docker logout
+                    docker logout 54.235.238.149:8082
                 """
             }    
         }
