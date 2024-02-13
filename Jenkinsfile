@@ -13,10 +13,9 @@ pipeline {
         stage('Building the Docker image') {
             steps {
                 sh """
-                    tag="vamshiamruthapu/sample-java-app/`echo $BRANCH_NAME | tr [:upper:] [:lower:]`:${BUILD_NUMBER}"
-                    docker build -t $tag .
+                    docker build -t vamshiamruthapu/sample-java-app/`echo $BRANCH_NAME | tr [:upper:] [:lower:]`:${BUILD_NUMBER} .
                     docker login -u vamshiamruthapu -p "Vamshi@12345"
-                    docker push $tag
+                    docker push vamshiamruthapu/sample-java-app/`echo $BRANCH_NAME | tr [:upper:] [:lower:]`:${BUILD_NUMBER}
                     docker logout
                 """
             }    
