@@ -1,6 +1,6 @@
 pipeline {    
     agent {
-        lable 'infra'
+        label 'infra'
     }
     stages {
         stage('Building the application') {
