@@ -2,7 +2,7 @@ pipeline {
     /*agent {
         label 'infra'
     }*/
-    
+    agent none
     environment {
         NEXUS_CREDS = credentials('nexus-creds')
     }
