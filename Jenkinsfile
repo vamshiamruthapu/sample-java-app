@@ -23,8 +23,7 @@ pipeline {
             agent{
                 docker{
                     image 'docker:dind'
-                    args '-u root:root'
-                    args '-e DOCKER_HOST=tcp://44.204.73.111:2376'
+                    args '-u root:root -e DOCKER_HOST=tcp://44.204.73.111:2376'
                 }
             }
             steps {
