@@ -23,6 +23,7 @@ pipeline {
             agent{
                 docker{
                     image 'docker:dind'
+                    args '-u root:root'
                 }
             }
             steps {
