@@ -23,10 +23,10 @@ pipeline {
             steps {
                 sh """
                     docker build -t 54.235.238.149:8082/sample-java-app/`echo $BRANCH_NAME | tr [:upper:] [:lower:]`:$BUILD_NUMBER .
-                    //docker login -u $NEXUS_CREDS_USR -p $NEXUS_CREDS_PSW 54.235.238.149:8082
-                    //docker push 54.235.238.149:8082/sample-java-app/`echo $BRANCH_NAME | tr [:upper:] [:lower:]`:$GIT_COMMIT
-                    //docker rmi 54.235.238.149:8082/sample-java-app/`echo $BRANCH_NAME | tr [:upper:] [:lower:]`:$GIT_COMMIT
-                    //docker logout 54.235.238.149:8082 
+                    #docker login -u $NEXUS_CREDS_USR -p $NEXUS_CREDS_PSW 54.235.238.149:8082
+                    #docker push 54.235.238.149:8082/sample-java-app/`echo $BRANCH_NAME | tr [:upper:] [:lower:]`:$GIT_COMMIT
+                    #docker rmi 54.235.238.149:8082/sample-java-app/`echo $BRANCH_NAME | tr [:upper:] [:lower:]`:$GIT_COMMIT
+                    #docker logout 54.235.238.149:8082 
                 """
             }    
         }
