@@ -15,7 +15,7 @@ pipeline {
             steps {
                 sh """
                     mvn clean package
-                    mvn sonar:sonar -Dsonar.projectKey=test-project -Dsonar.host.url=http://44.211.156.146:9000 -Dsonar.login=20065bcc2b55da46bd51328972323e52509f6e4f
+                    mvn sonar:sonar -Dsonar.projectKey=test-project -Dsonar.host.url=http://44.211.156.146:9000 -Dsonar.login=squ_9aa9fddb92d8a746eadebb8669ec80db4c3a627e
                 """    
             }
         }
